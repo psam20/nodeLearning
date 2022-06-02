@@ -1,0 +1,23 @@
+{
+  "name": "node-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psam20/nodeLearning.git"
+  },
+  "author": "Kishan Guptas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psam20/nodeLearning/issues"
+  },
+  "homepage": "https://github.com/psam20/nodeLearning#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
