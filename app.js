@@ -1,23 +1,23 @@
 const express = require('express');
+const bodyParser = require('body-parser')
+const path = require('path')
+
+
+const adminRoutes = require('./routes/adminRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 const app = express();
-// app.use('/',(req,res,next)=>{
-// console.log("this is Middleware 1")
-// next()
-// })
-// app.use((req,res,next)=>{
-//     console.log("this is Middleware 2")
-//     res.send("Hello World")
-//     next()
-// })
-app.use('/u',(req,res,next)=>{
-    console.log("this is middleware user")
-   return res.send('<h2>Users Response Page</h2>')
+
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(express.static(path.join(__dirname , "public")))
+app.use(adminRoutes)
+app.use(userRoutes)
+
+app.use((req,res,next)=>{
+    res.status(404).send('<h1>404 Error Page Not Found</h1>')
 })
-app.use('/',(req,res,next)=>{
-    console.log("this is base Middleware")
-   return res.send('<h1>THis is Assignment 1 User Page</h1>')
-})
+
+
 
 
 app.listen(4200);
