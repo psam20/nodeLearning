@@ -7,6 +7,7 @@ const shopRoutes = require('./routes/shop')
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}))
+app.use(express.static(path.join(__dirname , 'public'))) //here Static function of Express Serves Static Files
  
 app.use('/admin',adminRoutes) // Here adminRoutes Function only runs for route which starts with /admin
 app.use(shopRoutes)
