@@ -15,7 +15,7 @@ app.use('/admin',adminData.routes) // Here adminRoutes Function only runs for ro
 app.use(shopRoutes)
 
 app.use((req,res,next)=>{
-    res.status(404).sendFile(path.join(__dirname,'views','errorPage.html'));
+    res.render('404' , {docTitle :"Page Not Found "});
 
 })
 

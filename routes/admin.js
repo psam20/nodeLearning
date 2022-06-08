@@ -8,7 +8,7 @@ const rootDir = require('../utill/path')
 const products = []
 //  /admin/add-product ==> GET
 router.get('/add-product', (req, res, next) => {
-    res.render('add-product',{pageTitle: 'Add Product Page'})
+    res.render('add-product',{docTitle: 'Add Product Page'})
 });
 //  /admin/product ==> POST
 router.post('/add-product', (req, res, next) => {
