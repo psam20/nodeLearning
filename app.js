@@ -6,7 +6,8 @@ const adminData = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 
 const app = express();
-app.set('view engine', 'pug')
+// Here If We Want To change the View Engine to ejs , replace pug to ejs and vice versa
+app.set('view engine', 'ejs')
 app.set('views','views')
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname , 'public'))) //here Static function of Express Serves Static Files
