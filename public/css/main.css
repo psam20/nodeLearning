@@ -37,10 +37,11 @@ main{
 .form-control{
     margin: 1rem 0;
 }
-.form-control label , .form-control input {
+.form-control label , .form-control input , .form-control textarea {
     display: block;
+    margin-bottom: 0.25rem;
 }
-.form-control input {
+.form-control input , .form-control textarea  {
     border: 1px solid #dbc441;
     font: inherit;
     border-radius: 2px;
@@ -56,4 +57,8 @@ button{
 }
 button:hover,button:active{
     background-color: #6200ff;
+}
+.form-control input:focus,
+.form-control textarea:focus{
+    outline-color: #00695c;
 }

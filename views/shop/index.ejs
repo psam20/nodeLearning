@@ -10,11 +10,11 @@
                             <h1 class="product__title"><%= product.title %> </h1>
                         </header>
                         <div class="card__image">
-                            <img src="" alt="Great Book">
+                            <img src="<%= product.imageUrl %>" alt="<%= product.title %> ">
                         </div>
                         <div class="card__content">
-                            <h2 class="product__price">$ 20</h2>
-                            <p class="product__description">A very Interesting Book</p>
+                            <h2 class="product__price">$ <%= product.price %></h2>
+                            <p class="product__description"><%= product.description %></p>
                         </div>
 
                     </article>
