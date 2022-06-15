@@ -1,11 +1,13 @@
 const express = require('express')
-const productController = require('../controllers/product')
+const adminController = require('../controllers/admin')
 const router = express.Router() //Here this Router Function is a Mini Express.js which handles all the Routes
 
 
 //  /admin/add-product ==> GET
-router.get('/add-product', productController.getAddProducts);
+router.get('/add-product', adminController.getAddProducts);
+
+router.get('/products',adminController.getProducts)
 //  /admin/product ==> POST
-router.post('/add-product', productController.postAddProduct);
+router.post('/add-product', adminController.postAddProduct);
 
 module.exports =router
